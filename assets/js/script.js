@@ -66,12 +66,15 @@ gameCards.forEach((card) => {
                 secondCard = null;
 
                 if (matchCount === 8) {
-                    console.log("Game Over!");
-
+                    Swal.fire({
+                        title: "Game Over!",
+                        text: "Congratulations! You've matched all the cards!",
+                        icon: "success"
+                    });
                     setTimeout(() => {
-                        alert("Congratulations! You have matched all the cards!");
+
                         location.reload();
-                    }, 500);
+                    }, 5000);
                 }
             }
             else {
